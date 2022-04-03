@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: .5rem;
+}
+
+.input {
+  border: none;
+  border-radius: .3em;
+  padding: .25rem;
+  width: 300px;
+  height: 150px;
+  font-size: 68px;
+  margin: 0px 10px;
+  outline: none;
+}
+
+.exchange-form {
+  width: 300px;
+  height: 200px;
+}
+
+select {
+  margin: .5rem 20px 20px 0px;
+  width: 300px;
+  border: none;
+  border-bottom: gray 1px solid;
+}
+
+
+.switch-button {
+  width: 300px;
+  background-color: deeppink;
+  color: white;
+  font-family: 'Calibri';
+  margin: 20px 0;
+  border: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  margin: 20px 0px;
+  border-radius: 20px;
+}
+
+.inputs {
+  display: flex;
+  margin: 20px 10px;
+}
+
+.currency-row {
+  margin-right: 20px;
+}
+
+.options {
+  margin: 10px 20px;
+}
+
+.bottom-section {
+  display: flex;
+}
+
+.current-rate {
+  font-weight: bold;
+}
+
+.todays-change {
+  font-weight: bold;
+}
+
+.img-symbol {
+  margin: 60px 0px;
+  width: 30px;
+  height: 40px;
+}
+
+.symbol-input {
+  display: flex;
+}
+
+
+@media screen and (max-height: 650px) {
+  .exchange-form {
+    height:150px;
+  }
+
+  .input {
+    font-size: 34px;
+    margin: 0 110px;
+    width: 200px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  select {
+    width: 100px;
+  }
+
+  .input {
+    font-size: 45px;
+    margin-left: 80px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .switch-button {
+    margin-left: 120px;
+  }
+  .options {
+    width: 80px;
+  }
+  .input {
+    width: 190px;
+  }
+}
