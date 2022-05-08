@@ -4,7 +4,7 @@ import CurrencyRow from "./CurrencyRow";
 
 const BASE_URL_OLD = 'http://api.exchangeratesapi.io/latest?access_key=75f551a14f051876bfe13b3cd7a0c673'
 const BASE_URL = 'https://api.fastforex.io/'
-const API_KEY = 'api_key=95602cf3a5-e5a497f49d-r9nxjr'
+const API_KEY = 'api_key=f5a45a0b7e-4810386784-rbki8o'
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
                 setFromCurrency(data.base)
                 setToCurrency(data[results[21]])
                 setExchangeRate(data.results[results[21]])
-
+                console.log(data)
                 if (data.results[results[21]] > 0) {
                     setToAmount(fromAmount * data.results[results[21]])
                 } else {
@@ -57,7 +57,7 @@ function App() {
 
     useEffect(() => {
         toCurrency &&
-        fetch(`${BASE_URL}historical?date=2022-04-01&${API_KEY}&from=${fromCurrency}`)
+        fetch(`${BASE_URL}historical?date=2022-05-05&${API_KEY}&from=${fromCurrency}`)
             .then(res => res.json())
             .then(data => {
                     const yesterday = (data.results[Object.keys(data.results).filter((el) => el == toCurrency)])
